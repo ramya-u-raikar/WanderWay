@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-custom">
+    <a class="navbar-brand" href="#">WanderWay</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Book</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Packages
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">United State</a>
+            <a class="dropdown-item" href="#">India</a>
+            <a class="dropdown-item" href="#">France</a>
+            <a class="dropdown-item" href="#">Germany</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Login and Register buttons placed outside the collapsing navbar -->
+    <span class="navbar-text ml-auto">
+      <button class="btn btn-light btn-sm btn-outline-dark" data-toggle="modal" data-target="#loginmodal"> Login </button>
+      <button class="btn btn-light btn-sm btn-outline-dark" data-toggle="modal" data-target="#registermodal"> Register </button>
+    </span>
+  </nav>
+
+<!-- hero section -->
+<div class="jumbotron">
+  <div>
+    <h3 class="display-4" id="greet">Welcome to WanderWay</h3>
+    <h1 class="display-2" id="call"> <span id="changetxt"> Visit  </span></h1>
+     <a class="btn btn-dark btn-outline-warning" href="#" role="button">Book Now</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="images/world.jpg" alt="brand image" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6">
+      <h2 class="text-center mb-4" id="booking">Book Your Trip</h2>
+      <form id="bookingForm" onsubmit="showAlert(event);">
+        <div class="form-group">
+          <label for="location">Where to</label>
+          <select class="form-control" id="location" required>
+            <option value="">Select a destination</option>
+            <option value="United State">United State</option>
+            <option value="India">India</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="persons">How Many Persons</label>
+          <input type="number" class="form-control" id="persons" min="1" required>
+        </div>
+        <div class="form-group">
+          <label for="startDate">Start Date</label>
+          <input type="date" class="form-control" id="startDate" required>
+        </div>
+        <div class="form-group">
+          <label for="endDate">End Date</label>
+          <input type="date" class="form-control" id="endDate" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" required minlength="50" maxlength="500"></textarea required>
+        </div>
+        <button type="submit" class="btn btn-dark btn-outline-warning">Book Now</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  function showAlert(event) {
+    event.preventDefault();
+    alert("Booking Successful!");
+  }
+</script>
+
+
+<div class="pkgsec">
+<div class="container mt-5">
+  <h3 class="text-center " mt-5 id="package">Package Gallery</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/statue of liberty.jpg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Statue of Liberty</h4>
+          <h6>Stand tall beneath the Statue of Liberty, a symbol of freedom and hope, offering stunning views of the New York Harbor and beyond.</h6>
+          <div id="price">
+            <span id="price">Price: $1950</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/Taj Mahal.jpeg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Taj Mahal</h4>
+          <h6>Marvel at the timeless beauty of the Taj Mahal, a symbol of eternal love and one of the world’s most exquisite architectural wonders.</h6>
+          <div id="price">
+            <span id="price">Price: $1800</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/cologne cathedral.jpeg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Cologne Cathedral</h4>
+          <h6>Step into the awe-inspiring Cologne Cathedral, where towering Gothic spires and breathtaking stained glass tell a story of history and grandeur.</h6>
+          <div id="price">
+            <span id="price">Price: $1620</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/Trevi Fountain.jpg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Trevi Fountain</h4>
+          <h6>Make a wish at the Trevi Fountain, where the magic of Rome’s most beautiful Baroque masterpiece invites you to be part of its timeless charm.</h6>
+          <div id="price">
+            <span id="price">Price: $1590</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/Eiffel Tower.jpg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Eiffel Tower</h4>
+          <h6>Soar to new heights at the Eiffel Tower, where unforgettable panoramic views of Paris await you, making every moment a true masterpiece.</h6>
+          <div id="price">
+            <span id="price">Price: $1770</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/Marvante beach.jpg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Marvante Beach</h4>
+          <h6>Relax on the serene shores of Marvante Beach, where golden sands and crystal-clear waters create the perfect escape into nature's tranquility.</h6>
+          <div id="price">
+            <span id="price">Price: $1370</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/french-ski-resort.png" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>French Ski Resort</h4>
+          <h6>Experience the thrill of world-class skiing, breathtaking alpine views, and luxury at this premier French ski resort.</h6>
+          <div id="price">
+            <span id="price">Price: $2050</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/View-of-Coorg-1.jpg" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Coorg</h4>
+          <h6>A picturesque hill station with lush coffee plantations, misty mountains, and serene landscapes, perfect for a peaceful retreat and outdoor adventures.</h6>
+          <div id="price">
+            <span id="price">Price: $1850</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <img src="images/alaska-northern-lights.webp" class="img-fluid">
+        </div>
+        <div class="card-footer">
+          <h4>Alaska</h4>
+          <h6>A vast, rugged paradise known for its stunning glaciers, wildlife, and dramatic landscapes, offering unforgettable adventures in the wild.</h6>
+          <div id="price">
+            <span id="price">Price: $1600</span>
+          </div>
+          <div id="rating">
+            <span id="ratings">Ratings:
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i></span>
+          </div>
+          <button class="btn btn-primary btn-block mt-2">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container my-5" id="services">
+  <h2 class="text-center mb-5 font-weight-bold" id="service">Explore Our Exclusive Services</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card service-card text-center shadow-lg border-0 rounded-lg transform-hover">
+        <div class="card-body p-4">
+          <h5 class="card-title service-card-title">Affordable Hotels</h5>
+          <p class="card-text service-card-text">Stay in top-rated hotels worldwide with great comfort at budget-friendly prices. Your dream vacation made affordable!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card text-center shadow-lg border-0 rounded-lg transform-hover">
+        <div class="card-body p-4">
+          <h5 class="card-title service-card-title">Food & Drinks</h5>
+          <p class="card-text service-card-text">Indulge in gourmet meals and exclusive travel dining experiences. From vegan to gluten-free, we've got you covered!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card text-center shadow-lg border-0 rounded-lg transform-hover">
+        <div class="card-body p-4">
+          <h5 class="card-title service-card-title">Safety Guide</h5>
+          <p class="card-text service-card-text">Our expert guides provide personalized tips, ensuring your safety and enjoyment on every trip.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card text-center shadow-lg border-0 rounded-lg transform-hover">
+        <div class="card-body p-4">
+          <h5 class="card-title service-card-title">Luxury Transport</h5>
+          <p class="card-text service-card-text">Travel in style with luxury transport options, including private cabs, buses, and premium rentals at your service.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card text-center shadow-lg border-0 rounded-lg transform-hover">
+        <div class="card-body p-4">
+          <h5 class="card-title service-card-title">Travel Insurance</h5>
+          <p class="card-text service-card-text">Travel worry-free with our comprehensive insurance plans covering medical emergencies, cancellations, and more.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card service-card text-center shadow-lg border-0 rounded-lg transform-hover">
+        <div class="card-body p-4">
+          <h5 class="card-title service-card-title">Custom Packages</h5>
+          <p class="card-text service-card-text">Design your dream vacation with our tailor-made packages that suit your specific interests and budget.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<script>
+  document.getElementById("startDate").setAttribute("min", new Date().toISOString().split('T')[0]);
+
+  document.getElementById("endDate").addEventListener("change", function() {
+      var startDate = document.getElementById("startDate").value;
+      var endDate = this.value;
+
+      if (endDate <= startDate && endDate !== "") {
+          alert("End date must be greater than start date.");
+          this.setCustomValidity("End date must be greater than start date.");
+      } else {
+          this.setCustomValidity("");  
+      }
+  });
+</script>
+
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <img src="images/20-skydiving1.jpg" alt="Experience 1">
+    <img src="images/Food-and-Culture-Festival-.jpg" alt="Experience 2">
+    <img src="images/smilingfaces.jpg" alt="Experience 3">
+    <img src="images/skubadiving.jfif" alt="Experience 4">
+    <img src="images/Enchanting.webp" alt="Experience 5">
+  </section>
+
+
+  <section class="about">
+    <div>
+      <img src="images/wanderway.png" style="width:100%">
+    </div>
+    <div>
+      <h2>About Us</h2>
+      <p>At <strong>WanderWay</strong>, we believe travel is more than just visiting places—it’s about creating unforgettable experiences. Since <strong>2020</strong>, we’ve been helping travelers explore the world with seamless, personalized journeys.</p>
+      <p><strong>Why Choose Us?</strong></p>
+      <ul>
+        <li>✅ <strong>Tailored Travel Plans</strong> – Every trip is customized for you.</li>
+        <li>✅ <strong>Expert Guides</strong> – Local insights for an immersive experience.</li>
+        <li>✅ <strong>Hassle-Free Booking</strong> – We handle everything for you.</li>
+      </ul>
+      <p>Join thousands of happy travelers and let’s make your next adventure extraordinary!</p>
+      <p><strong>📍 Headquarters:</strong> New York, USA</p>
+      <p><strong>📧 Contact:</strong> <a href="mailto:info@wanderway.com">info@wanderway.com</a></p>
+    </div>    
+  </section>
+
+  
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Subscribe to our newsletter for updates.</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </section>
+
+<footer class="footer">
+    <p class="brand">WanderWay</p>
+    <div class="social-icons">
+        <a href="#" class="icon"><img src="images/Facebook.webp" alt="Facebook"></a>
+        <a href="#" class="icon"><img src="images/instagram.jfif" alt="Instagram"></a>
+        <a href="#" class="icon"><img src="images/Twitter.png" alt="Twitter"></a>
+    </div>
+    <p class="copyright">&copy; 2025 WanderWay. All Rights Reserved.</p>
+</footer>
+
+
+
+<div class="modal" id="registermodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"> <h3> Register form </h3></div>
+      <div class="modal-body">
+        <form id="registerForm">
+          <input type="text" id="fullname" placeholder="Fullname" class="form-control" required>
+          <input type="number" id="contact" placeholder="Contact" class="form-control" required>
+          <input type="date" id="dob" placeholder="Date of Birth" class="form-control" required>
+          <input type="email" id="email" placeholder="Email ID" class="form-control" required>
+          <input type="password" id="password" placeholder="Password" class="form-control" required>
+          <input type="text" id="gender" placeholder="Gender" class="form-control" required>
+          <button type="submit" class="btn btn-info" id="registerbtn"> Register </button>
+        </form>
+        <p class="mt-2"> Already have an account? <a href="#loginmodal" data-toggle="modal" data-dismiss="modal"> Login</a></p>
+      </div>
+      <div class="modal-footer"> <button class="btn btn-danger" data-dismiss="modal"> Close </button> </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="loginmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"> <h3> Login form </h3></div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <input type="email" id="loginEmail" placeholder="Email ID" class="form-control" required>
+          <input type="password" id="loginPassword" placeholder="Password" class="form-control" required>
+          <button type="submit" class="btn btn-success" id="loginbtn"> Login </button>
+        </form>
+        <p class="mt-2"> Don't have an account? <a href="#registermodal" data-toggle="modal" data-dismiss="modal">Register</a> </p>
+      </div>
+      <div class="modal-footer"> <button class="btn btn-danger" data-dismiss="modal"> Close </button> </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const fullname = document.getElementById('fullname').value.trim();
+    const contact = document.getElementById('contact').value.trim();
+    const dob = document.getElementById('dob').value;
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const gender = document.getElementById('gender').value.trim();
+
+    if (!fullname || !contact || !dob || !email || !password || !gender) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    if (!/^\d{10}$/.test(contact)) {
+      alert('Contact number should be of 10 digits.');
+      return;
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    alert('Registration successful!');
+    $('#registermodal').modal('hide');
+
+    document.getElementById('registerForm').reset();
+  });
+
+  
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const loginEmail = document.getElementById('loginEmail').value.trim();
+    const loginPassword = document.getElementById('loginPassword').value.trim();
+
+    if (!loginEmail || !loginPassword) {
+      alert('Please fill in both fields.');
+      return;
+    }
+
+    const loginEmailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!loginEmailPattern.test(loginEmail)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    alert('Login successful!');
+    $('#loginmodal').modal('hide');
+
+    document.getElementById('loginForm').reset();
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>	
+</body>
+</html>

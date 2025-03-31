@@ -1,0 +1,320 @@
+.bg-custom{
+	background-color:#474546;
+}
+.nav-link {
+	color: white;
+	font-family: "EB Garamond", serif;
+}
+
+.jumbotron{
+	position: relative;
+    width: 100%;
+    height: 90vh;
+	padding: 20px;
+    background-image: url('images/mountain.jpg'); 
+	background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	font-family: Arial, sans-serif;
+    font-weight: bold; 
+    font-size: 40px	
+}
+#call{
+	font-family: "EB Garamond", serif;
+}
+
+#changetxt:after {
+	content: "";
+	animation-name:changetextanim;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes changetextanim {
+	20% {
+		content:"United State";
+		color: darkblue;
+	}
+
+	40% {
+		content:"India";
+		color: darkred;
+	}
+
+	60% {
+		content:"Germany";
+		color: #1f6f7d;
+	}
+
+	80% {
+		content:"France";
+		color: deeppink;
+	}
+
+	100% {
+		content:"Italy";
+		color: darkmagenta;
+	}
+
+}
+
+#greet {
+	font-family: "Dancing Script", serif;
+}
+
+#booking, #package, #service, .gallery h2 {
+	font-family: "DM Serif Display", serif;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+
+.navbar-brand {
+	color: white;
+	font-family: "Dancing Script", serif;
+}
+
+.bi-star-fill {
+	color: orange;
+}
+
+ #ratings, #price {
+	font-weight: 600
+}
+
+.form-group {
+	font-weight: 600;
+}
+
+.service-card {
+	background-color: #474546; 
+  }
+  
+  .service-card-title {
+	text-transform: uppercase; 
+	color: #f0f0f0;  
+	font-family: "EB Garamond", serif; 
+	font-weight: 600;
+  }
+  
+  .service-card-text {
+	color: #f0f0f0; 
+	font-family: 'Roboto', sans-serif; 
+  }
+  
+  .transform-hover:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+ 
+  .container {
+	max-width: 1300px;
+  }
+  
+  .text-center {
+	text-align: center;
+  }
+  
+  .text-light {
+	color: #f0f0f0;
+  }
+  
+  .text-uppercase {
+	text-transform: uppercase; 
+  }
+  
+  .font-weight-bold {
+	font-weight: bold;
+  }
+  
+
+  .card-body {
+	padding: 1.5rem; 
+  }
+  
+
+.pkgsec .card-body img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+
+.pkgsec .card-footer h6 {
+	width: 100%;
+	height: 90px;
+}
+	
+
+.pkgsec h3, #services h2, .gallery h2 {
+	animation: fadeIn 2s ease-in-out;
+	animation-iteration-count: infinite;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .gallery {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
+	flex-wrap: wrap;
+  }
+
+  .gallery h2 {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+  
+  .gallery img {
+	width: 300px;
+	height: 200px;
+	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
+	border-radius: 10px;
+  }
+  
+  .gallery img:hover {
+	transform: scale(1.1);
+  }
+  
+  .about {
+	display: flex;
+	align-items: stretch; 
+	height: 100vh; 
+	flex-wrap: wrap; 
+  }
+  
+  .about div {
+	width: 50%; 
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+  }
+  
+  .about h2 {
+	font-family: "EB Garamond", serif;
+	font-weight: bold;
+	font-size: 2rem; 
+	margin-bottom: 20px;
+  }
+  
+  .about img {
+	width: 100%; 
+	height: auto; 
+	object-fit: cover; 
+	border-radius: 8px; 
+  }
+  
+  @media (max-width: 768px) {
+	.about {
+	  flex-direction: column; 
+	  height: auto; 
+	}
+	.about div {
+	  width: 100%;
+	  text-align: center;
+	  padding: 20px 10px;
+	}
+  
+	.about h2 {
+	  font-size: 1.8rem; 
+	  margin-bottom: 15px;
+	}
+  
+	.about p {
+	  font-size: 1rem; 
+	  line-height: 1.6; 
+	}
+  
+	.about ul li {
+	  font-size: 1rem; 
+	}
+  
+	.about img {
+	  width: 90%; 
+	  height: auto; 
+	  margin-bottom: 20px;
+	}
+  }
+  
+  
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer .social-icons {
+    margin: 10px 0;
+}
+
+.footer .icon img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .icon img:hover {
+    transform: scale(1.2);
+}
+
+.footer .copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+  
+  .contact {
+	text-align: center;
+	padding: 40px;
+	background-color: #f4f4f4;
+  }
+  
+  .contact input[type="email"] {
+	padding: 10px;
+	width: 80%;
+	max-width: 300px;
+	margin-bottom: 10px;
+  }
+  
+  .contact button {
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+  }
+  
+input {
+	margin-bottom: 20px;
+
+}
+	
+
