@@ -4,6 +4,7 @@
 .nav-link {
 	color: white;
 	font-family: "EB Garamond", serif;
+	
 }
 
 .jumbotron{
@@ -38,27 +39,22 @@
 		content:"United State";
 		color: darkblue;
 	}
-
 	40% {
 		content:"India";
 		color: darkred;
 	}
-
 	60% {
 		content:"Germany";
 		color: #1f6f7d;
 	}
-
 	80% {
 		content:"France";
 		color: deeppink;
 	}
-
 	100% {
 		content:"Italy";
 		color: darkmagenta;
 	}
-
 }
 
 #greet {
@@ -75,6 +71,7 @@
 .navbar-brand {
 	color: white;
 	font-family: "Dancing Script", serif;
+	
 }
 
 .bi-star-fill {
@@ -133,6 +130,23 @@
 
   .card-body {
 	padding: 1.5rem; 
+	
+  }
+
+  .card {
+	border: 2px solid #333; 
+	
+  }
+
+  .card:hover {
+	transform: scale(1.02);
+	transition: 0.3s ease-in-out;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-footer{
+	background-color: #555354;
+	color: #f0f0f0;
   }
   
 
@@ -316,5 +330,3 @@ input {
 	margin-bottom: 20px;
 
 }
-	
-
